@@ -1,0 +1,57 @@
+水平垂直居中
+/* 第一种 */
+#container{
+    position:relative;
+}
+ 
+#center{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/* 第二种 */
+ 
+#container{
+    position:relative;
+}
+ 
+#center{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-50px 0 0 -50px;
+}
+/* 第三种 */
+ 
+#container{
+    position:relative;
+}
+ 
+#center{
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+/* 第四种 flex */
+ 
+#container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+/* CSS margin重叠问题 */
+/* 块元素在垂直方向上的margin是很奇怪的，会有重叠现象。
+如果display都是block，有三种情况：
+外间距均为正数，竖直方向上会选择最大的外边距作为间隔
+一正一负，间距 = 正 - |负|
+两个负，间距 = 0 - 绝对值最大的那个
+设置display: inline-block的盒子不会有margin重叠，position: absolute的也不会出现 */

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>京东购物</title>
+</head>
+<!-- 注：加ontouchstart使css：active生效 -->
+<body ontouchstart="">
+        <input type="text" onkeydown="show(this.value)">
+        <div></div>
+        
+        <script type="text/javascript">
+        function show(val) {
+        document.getElementsByTagName('div')[0].innerHTML = val;
+        }
+        </script>
+</body>
